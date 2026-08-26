@@ -29,7 +29,7 @@ For the MJX (GPU) stage:
 venv/bin/python -m pip install jax jaxlib mujoco-mjx flax
 ```
 
-## Stage 1 — MPC
+## Stage 1 - MPC
 
 A cross-entropy method planner runs in a receding horizon over a spline
 parameterisation of the joint targets. The cost combines velocity tracking,
@@ -49,7 +49,7 @@ Check the speed envelope:
 python scripts/envelope.py --model assets/r1/scene.xml --gait
 ```
 
-## Stage 2 — recording
+## Stage 2 - recording
 
 Records MPC rollouts at a range of commanded speeds. Each episode stores
 `qpos`, `qvel`, the position targets, joint torques, and foot state.
@@ -69,7 +69,7 @@ Check gait quality against target bands:
 python scripts/gait_quality.py data/qcheck/gait_v6.h5
 ```
 
-## Stage 3 — DeepMimic
+## Stage 3 - DeepMimic
 
 Single gait cycles are extracted from the recordings and looped. The policy
 outputs residual joint targets on top of the recorded MPC targets, and is
@@ -128,3 +128,9 @@ BSD 3-Clause, see `LICENSE`.
 The Unitree R1 description in `assets/r1/` is copyright Unitree Robotics and
 distributed under BSD 3-Clause; see `assets/r1/LICENSE` and
 `assets/r1/SOURCE.md`.
+
+## Contributors
+- Fatima Atwi (Developer)
+- Olivier Stasse (Supervisor)
+- Constant Roux (Advisor)
+
