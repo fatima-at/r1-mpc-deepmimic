@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "r1-mpc-deepmimic"
+version = "0.1.0"
+description = "CEM-MPC to DeepMimic to spiking-network distillation for the Unitree R1"
+requires-python = ">=3.10"
+dependencies = [
+    "mujoco>=3.2",
+    "numpy>=1.24",
+    "h5py>=3.9",
+]
+
+[tool.setuptools]
+packages = ["mpc", "mpc.tasks", "deepmimic"]
